@@ -8,14 +8,18 @@ import { AppComponent } from './app.component';
 import { StockChartComponent } from './stock-chart/stock-chart.component';
 import { AppRoutingModule } from './app-routing.module';
 import { SimpleChartComponent } from './simple-chart/simple-chart.component';
+import { HighMapComponent } from './high-map/high-map.component';
 
 declare var require: any;
 
 export function highchartsFactory() {
-  const hs = require('highcharts/highstock');
-  return hs;
+  const hc = require('highcharts');
+  const hs = require('highcharts/modules/stock');
+  const hm = require('highcharts/modules/map');
+  hs(hc);
+  hm(hc);
+  return hc;
 }
-
 
 @NgModule({
   imports: [
@@ -27,7 +31,8 @@ export function highchartsFactory() {
   declarations: [
     AppComponent,
     StockChartComponent,
-    SimpleChartComponent
+    SimpleChartComponent,
+    HighMapComponent
   ],
   providers: [
     {

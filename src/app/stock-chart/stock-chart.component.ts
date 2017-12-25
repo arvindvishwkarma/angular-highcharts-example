@@ -4,7 +4,7 @@ import {Http} from '@angular/http';
 @Component({
     moduleId: module.id,
     selector: 'app-stock-chart',
-    templateUrl: './stock-chart.component.html'
+    template: '<chart type="StockChart" [options]="options"></chart>'
 })
 export class StockChartComponent {
     options: Object;
