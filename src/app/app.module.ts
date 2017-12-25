@@ -12,12 +12,7 @@ import { SimpleChartComponent } from './simple-chart/simple-chart.component';
 declare var require: any;
 
 export function highchartsFactory() {
-  const hc = require('highcharts');
-  const dd = require('highcharts/modules/drilldown');
   const hs = require('highcharts/highstock');
-  // dd(hc);
-  // hs(hc);
-
   return hs;
 }
 
