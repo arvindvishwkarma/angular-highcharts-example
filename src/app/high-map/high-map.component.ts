@@ -15,7 +15,7 @@ export class HighMapComponent {
                 spacingBottom: 20
             },
             title: {
-                text: 'Europe time zones (High Map Examples)'
+                text: 'Europe time zones (High Map Example)'
             },
 
             legend: {
